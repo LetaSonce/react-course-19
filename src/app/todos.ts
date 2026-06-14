@@ -1,7 +1,7 @@
 const date1 = new Date(2026, 6, 18, 10, 24);
 const date2 = new Date(2026, 6, 19, 14, 47);
 
-export const todos = [
+export const initialTodos = [
   {
     title: "Изучить React",
     desc: "Да поскорее!",
