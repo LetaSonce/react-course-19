@@ -1,5 +1,5 @@
 import "bulma/css/bulma.css";
-import todos from "./todos";
+import { todos } from "./todos";
 import TodoList from "../components/TodoList";
 
 function App() {

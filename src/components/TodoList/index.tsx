@@ -1,10 +1,23 @@
-export default function TodoList(props: unknown) {
+interface ITodo {
+  title: string;
+  desc: string;
+  image: string;
+  done: boolean;
+  createdAt: string;
+  key: number;
+}
+
+interface ITodoListProps {
+  list: ITodo[];
+}
+
+export default function TodoList(props: ITodoListProps) {
   return (
     <section>
       <h1>Дела</h1>
       <table className="table is-hoverable is-fullwidth">
         <tbody>
-          {props.list.map((item: unknown) => (
+          {props.list.map((item) => (
             <tr key={item.key}>
               <td>
                 {item.done && <del>{item.title}</del>}
