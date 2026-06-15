@@ -2,6 +2,8 @@ import "bulma/css/bulma.css";
 import { initialTodos } from "./todos";
 import TodoList from "../components/TodoList";
 import { useState } from "react";
+import { type ITodo } from "../types/ITodo";
+import TodoAdd from "../components/TodoAdd";
 
 function App() {
 
@@ -22,6 +24,10 @@ function App() {
     setTodos(newTodos);
   }
 
+  const add = (deed: ITodo) => {
+    setTodos([...todos, deed]);
+  }
+
   return (
     <>
       <div className="container">
@@ -32,6 +38,7 @@ function App() {
         </nav>
         <main className="content px-6 py-6">
           <TodoList list={todos} setDone={setDone} del={del} />
+          <TodoAdd add={add} />
         </main>
       </div>
     </>
