@@ -1,11 +1,4 @@
-interface ITodo {
-  title: string;
-  desc: string;
-  image: string;
-  done: boolean;
-  createdAt: string;
-  key: number;
-}
+import { type ITodo } from "../../types/ITodo";
 
 interface ITodoListProps {
   list: ITodo[];
